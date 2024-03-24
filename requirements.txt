@@ -1,4 +1,5 @@
 pandas 
+seaborn
 notebook
 numpy
 scikit-learn
