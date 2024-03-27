@@ -14,4 +14,11 @@ class DataIngestionConfig:
     unzip_dir: Path
 
 ##next step is updating confuguration manager in src which will return all this paths in one shot
-    
+
+
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    STATUS_FILE: str
+    unzip_data_dir: Path
+    all_schema: dict
