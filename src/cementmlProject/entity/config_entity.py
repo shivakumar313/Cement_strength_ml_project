@@ -28,3 +28,19 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir: Path
+    train_data_path: Path
+    test_data_path: Path
+    model_name: float
+    max_depth: float
+    max_features: str
+    min_samples_leaf: float
+    min_samples_split: float
+    n_estimators: float
+    target_column: str
+
+
+
