@@ -21,7 +21,7 @@ class ModelTrainer:
         train_y = train_data[[self.config.target_column]]
         test_y = test_data[[self.config.target_column]]
 
-        RF = RandomForestRegressor(max_depth=self.config.max_depth, max_feature=self.config.max_features,min_samples_leaf=self.config.min_samples_leaf,min_samples_split=self.config.min_samples_split,n_estimators=self.config.n_estimators, random_state=42)
+        RF = RandomForestRegressor(max_depth=self.config.max_depth, max_features=self.config.max_features,min_samples_leaf=self.config.min_samples_leaf,min_samples_split=self.config.min_samples_split,n_estimators=self.config.n_estimators, random_state=42)
         RF.fit(train_x, train_y)
 
         joblib.dump(RF, os.path.join(self.config.root_dir, self.config.model_name))
